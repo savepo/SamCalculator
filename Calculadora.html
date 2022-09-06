@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>CalculadoraV2</title>
+    <link href="style.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="icon.png">
+
+    <script src="javascript/main.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <div class="display">
+                <p id="displayid">0</p>
+            </div>
+
+            <button class="btn-c" type="reset" onclick="clearDisplay()">C</button>
+            <button class="changeSign" onclick="changeSign()">+/-</button>
+            <button class="btn" id="divide" value="/" onclick="setHighlighted(this.value), preValue(this.value)">/</button>
+
+            <button class="btn numericButton" value="7" onclick="add(this.value)">7</button>
+            <button class="btn numericButton" value="8" onclick="add(this.value)">8</button>
+            <button class="btn numericButton"  value="9" onclick="add(this.value)">9</button>
+            <button class="btn" id="multiply" value="*" onclick="setHighlighted(this.value), preValue(this.value)">x</button>
+
+            <button class="btn numericButton" value="4" onclick="add(this.value)">4</button>
+            <button class="btn numericButton" value="5" onclick="add(this.value)">5</button>
+            <button class="btn numericButton" value="6" onclick="add(this.value)">6</button>
+            <button class="btn" id="substract" value="-" onclick="setHighlighted(this.value), preValue(this.value)">-</button>
+
+            <button class="btn numericButton" value="1" onclick="add(this.value)">1</button>
+            <button class="btn numericButton" value="2" onclick="add(this.value)">2</button>
+            <button class="btn numericButton" value="3" onclick="add(this.value)">3</button>
+            <button class="btn" id="sum" value="+" onclick="setHighlighted(this.value), preValue(this.value)">+</button>
+            
+            <button class="btn-0 btn numericButton" value="0" onclick="add(this.value)">0</button>
+            <button class="btn comma" id="comma" value="," onclick="add(this.value)">,</button>
+            <button class="btn" id="equal" value="equal" onclick="postValue(), equalButton()">=</button>
+        </div>
+    </div>
+
+
+</body>
+</html>
